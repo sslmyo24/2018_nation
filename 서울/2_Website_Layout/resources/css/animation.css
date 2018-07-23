@@ -1,0 +1,48 @@
+@keyframes slide1 {
+	0%, 100%, 12% {margin-left:0%;}
+	25%, 37% {margin-left:-100%;}
+	50%, 62% {margin-left:-200%;}
+	75%, 87% {margin-left:-300%;}
+}
+ @keyframes slide2 {
+	0%, 100%, 12% {margin-left:-300%;}
+	25%, 37% {margin-left:0%;}
+	50%, 62% {margin-left:-100%;}
+	75%, 87% {margin-left:-200%;}
+}
+ @keyframes slide3 {
+	0%, 100%, 12% {margin-left:-200%;}
+	25%, 37% {margin-left:-300%;}
+	50%, 62% {margin-left:-0%;}
+	75%, 87% {margin-left:-100%;}
+}
+ @keyframes slide4 {
+	0%, 100%, 12% {margin-left:-100%;}
+	25%, 37% {margin-left:-200%;}
+	50%, 62% {margin-left:-300%;}
+	75%, 87% {margin-left:0%;}
+}
+@keyframes pos1 {
+	0%, 100%, 12% {background:#f8cb25;width:40px;}
+	25%, 37% {background:#fff;width:20px;}
+	50%, 62% {background:#fff;width:20px;}
+	75%, 87% {background:#fff;width:20px;}
+}
+ @keyframes pos2 {
+	0%, 100%, 12% {background:#fff;width:20px;}
+	25%, 37% {background:#fff;width:20px;}
+	50%, 62% {background:#fff;width:20px;}
+	75%, 87% {background:#f8cb25;width:40px;}
+}
+ @keyframes pos3 {
+	0%, 100%, 12% {background:#fff;width:20px;}
+	25%, 37% {background:#fff;width:20px;}
+	50%, 62% {background:#f8cb25;width:40px;}
+	75%, 87% {background:#fff;width:20px;}
+}
+ @keyframes pos4 {
+	0%, 100%, 12% {background:#fff;width:20px;}
+	25%, 37% {background:#f8cb25;width:40px;}
+	50%, 62% {background:#fff;width:20px;}
+	75%, 87% {background:#fff;width:20px;}
+}
