@@ -1,0 +1,24 @@
+* {padding:0;margin:0;}
+ul,li {list-style:none;}
+a {text-decoration:none;}
+
+/*header*/
+#header {animation:bgChange 14s infinite;transition:3s;height:550px;}
+#header > .top {width:1180px;height:50px;margin:0 auto;display:flex;justify-content:space-between;align-items: center;padding:0 10px;position:relative;}
+#header > .top > .logo {font-size:15px;color:#fff;}
+#header > .top > .gnb > ul {display:flex;justify-content:space-between;width:320px;}
+#header > .top > .gnb a {color:#fff;font-size:15px;}
+#header > .top > .line_wrap {position:absolute;bottom:0;left:0;right:0;width:1200px;height:2px;background:#fff;display: flex;justify-content: center;}
+#header > .top > .line_wrap > .line {animation:line_animation 1s;background:#2ad2ef;width:100%;}
+#header > p {color:#fff;width:470px;margin-left:150px;margin-top:60px;}
+
+/*header animation*/
+@keyframes bgChange{
+	100%, 0% , 30% {background:url(../image/img4.jpg) no-repeat center / cover;}
+	33.33% , 63% {background:url(../image/sky.jpg) no-repeat center / cover;}
+	66.66% , 95% {background:url(../image/mountain.jpg) no-repeat center / cover;}
+}
+@keyframes line_animation{
+	from {width:0%;}
+	to {width:100%;}
+}
