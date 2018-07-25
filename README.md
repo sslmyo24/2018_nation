@@ -4,9 +4,9 @@
 
 ### 경기[https://github.com/sslmyo24/2018_nation/tree/master/%EA%B2%BD%EA%B8%B0](https://github.com/sslmyo24/2018_nation/tree/master/%EA%B2%BD%EA%B8%B0)
 
-### 경남
+### 경남[https://github.com/sslmyo24/2018_nation/tree/master/%EA%B2%BD%EB%82%A8](https://github.com/sslmyo24/2018_nation/tree/master/%EA%B2%BD%EB%82%A8)
 
-### 경북
+### 경북[https://github.com/sslmyo24/2018_nation/tree/master/%EA%B2%BD%EB%B6%81](https://github.com/sslmyo24/2018_nation/tree/master/%EA%B2%BD%EB%B6%81)
 
 ### 광주
 
@@ -22,7 +22,7 @@
 
 ### 전남
 
-### 충남
+### 충남[https://github.com/sslmyo24/2018_nation/tree/master/충남/](https://github.com/sslmyo24/2018_nation/tree/master/충남/)
 
 ### 충북
 
