@@ -104,24 +104,24 @@ input[type="radio"],input[type="checkbox"] {display:none;}
 .poster {height:930px;padding:0 calc((100vw - 1210px) / 2);}
 .poster > h1 {margin-top:50px;border-left:5px solid #e4012e;height:30px;line-height:30px;padding:0 10px;margin-bottom:30px;}
 .poster > ul {width:1210px;height:775px;display:flex;flex-wrap:wrap;align-content:space-between;justify-content:space-between;}
-.poster > ul > li {width:275px;height:370px;cursor:pointer;position:relative;overflow:hidden;z-index:20;}
-.poster > ul > li:nth-child(1) {background:url(../images/poster1.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(2) {background:url(../images/poster2.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(3) {background:url(../images/poster3.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(4) {background:url(../images/poster4.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(5) {background:url(../images/poster5.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(6) {background:url(../images/poster6.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(7) {background:url(../images/poster7.png) no-repeat center / cover;}
-.poster > ul > li:nth-child(8) {background:url(../images/poster8.png) no-repeat center / cover;}
-.poster > ul > li > .bg {width:100%;height:100%;background:#e4012e;opacity:.5;position:absolute;top:0;right:0;bottom:0;left:0;opacity:0;transition:.5s;}
-.poster > ul > li > .text {width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;text-align:center;color:#fff;opacity:0;}
-.poster > ul > li > .text > * {transition:.5s;}
-.poster > ul > li > .text > h2 {margin-top:40px;color:#fff;margin-bottom:30px;transform:translateY(-50px);}
-.poster > ul > li > .text > p {font-size:17px;width:240px;margin:0 auto;margin-bottom:60px;transform:translateY(-50px);}
-.poster > ul > li > .text > a {width:100px;height:50px;border:3px double #fff;display:inline-block;color:#fff;line-height:50px;border-radius:10%;transform:translateY(50px);}
-.poster > ul > li:hover > .bg {display:block;opacity:.5;}
-.poster > ul > li:hover > .text {opacity:1;}
-.poster > ul > li:hover > .text > * {transform:inherit;}
+.poster li {width:275px;height:370px;cursor:pointer;position:relative;overflow:hidden;z-index:20;}
+.poster li:nth-child(1) {background:url(../images/poster1.png) no-repeat center / cover;}
+.poster li:nth-child(2) {background:url(../images/poster2.png) no-repeat center / cover;}
+.poster li:nth-child(3) {background:url(../images/poster3.png) no-repeat center / cover;}
+.poster li:nth-child(4) {background:url(../images/poster4.png) no-repeat center / cover;}
+.poster li:nth-child(5) {background:url(../images/poster5.png) no-repeat center / cover;}
+.poster li:nth-child(6) {background:url(../images/poster6.png) no-repeat center / cover;}
+.poster li:nth-child(7) {background:url(../images/poster7.png) no-repeat center / cover;}
+.poster li:nth-child(8) {background:url(../images/poster8.png) no-repeat center / cover;}
+.poster li > .bg {width:100%;height:100%;background:#e4012e;opacity:.5;position:absolute;top:0;right:0;bottom:0;left:0;opacity:0;transition:.5s;}
+.poster li > .text {width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;text-align:center;color:#fff;opacity:0;}
+.poster li > .text > * {transition:.5s;}
+.poster li > .text > h2 {margin-top:40px;color:#fff;margin-bottom:30px;transform:translateY(-50px);}
+.poster li > .text > p {font-size:17px;width:240px;margin:0 auto;margin-bottom:60px;transform:translateY(-50px);}
+.poster li > .text > a {width:100px;height:50px;border:3px double #fff;display:inline-block;color:#fff;line-height:50px;border-radius:10%;transform:translateY(50px);}
+.poster li:hover > .bg {display:block;opacity:.5;}
+.poster li:hover > .text {opacity:1;}
+.poster li:hover > .text > * {transform:inherit;}
 
 /*연령별 장르 선호도*/
 .prefer {height:590px;background:#f5f5f5;}
@@ -147,6 +147,10 @@ input[type="radio"],input[type="checkbox"] {display:none;}
 #romance:checked ~ .btn_wrap .type li:nth-child(4){background:#808080;color:#fff;}
 
 /*그래프*/
+
+/*http://sergeylukin.com/css-3d-bar-graph/*/
+
+
 .graph {height:320px;width:950px;position:relative;margin:0 auto;margin-top:45px;}
 .graph, .graph > *:not(.y_shaft):not(.x_shaft) {transform-style:preserve-3d;}
 .graph > .sticks {height:320px;width:100%;position:absolute;}
