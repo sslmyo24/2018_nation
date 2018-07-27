@@ -1,0 +1,330 @@
+@font-face {
+	font-family:NanumSquare;
+	src:url(../font/NanumSquareL.woff) format('woff');
+	font-weight:200;
+}
+@font-face {
+	font-family:NanumSquare;
+	src:url(../font/NanumSquareR.woff) format('woff');
+	font-weight:400;
+}
+@font-face {
+	font-family:NanumSquare;
+	src:url(../font/NanumSquareB.woff) format('woff');
+	font-weight:600;
+}
+@font-face {
+	font-family:NanumSquare;
+	src:url(../font/NanumSquareEB.woff) format('woff');
+	font-weight:800;
+}
+
+* {margin:0;padding:0;}
+html,body {scroll-behavior:smooth;}
+body {font-family:NanumSquare;font-weight:200;}
+ul, li {list-style:none;}
+a {text-decoration:none;}
+input[type="radio"],input[type="checkbox"] {display:none;}
+
+
+/*header*/
+#header {height:100vh;background:url(../images/main.jpg) no-repeat center / cover;}
+#header > .top {width:calc(100% - 100px);margin:0 50px;height:100px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fff;}
+#header > .top > .logo {font-size:30px;line-height:25px;color:#fff;}
+#header > .top > .logo > span {color:#00adef;}
+#header > .top > .gnb > ul {width:285px;display:flex;justify-content:space-between;}
+#header > .top > .gnb > ul > li > a {color:#fff;font-size:15px;}
+#header > .top > .open_btn {width:30px;height:23px;display:flex;flex-wrap:wrap;align-content:space-between;}
+#header > .top > .open_btn > div {width:100%;height:3px;background:#fff;}
+#header > .text {margin-top:30vh;font-size:50px;text-align:center;}
+#header > .text > div {position:relative;height:60px;margin-bottom:20px;display:inline-block;width:100%;}
+#header > .text > div:before {content:"";animation:typing 13s infinite;display:block;font-size:50px;color:#fff;position:absolute;}
+#header > .text > div:after {content:"";display:block;background:#fff;width:50px;height:5px;right:0;bottom:0;position:absolute;}
+#header > .text > p {color:#04adef;}
+
+@keyframes typing {
+	0.53%{content:"ㅇ"}
+	1.06%{content:"아"}
+	1.59%{content:"알"}
+	2.12%{content:"아르"}
+	2.65%{content:"아름"}
+	3.18%{content:"아름ㄷ"}
+	3.71%{content:"아름다"}
+	4.24%{content:"아름당"}
+	4.77%{content:"아름다우"}
+	5.3%{content:"아름다운"}
+	5.83%{content:"아름다운 "}
+	6.36%{content:"아름다운 ㅂ"}
+	6.89%{content:"아름다운 받"}
+	7.42%{content:"아름다운 바다"}
+	7.95%{content:"아름다운 바다 "}
+	8.48%{content:"아름다운 바다 ㅅ"}
+	9.01%{content:"아름다운 바다 수"}
+	9.54%{content:"아름다운 바다 숨"}
+	10.07%{content:"아름다운 바다 숨 "}
+	10.6%{content:"아름다운 바다 숨 ㅅ"}
+	11.13%{content:"아름다운 바다 숨 수"}
+	11.66%{content:"아름다운 바다 숨 쉬"}
+	12.19%{content:"아름다운 바다 숨 쉰"}
+	12.72%{content:"아름다운 바다 숨 쉬느"}
+	13.25%{content:"아름다운 바다 숨 쉬는"}
+	13.78%{content:"아름다운 바다 숨 쉬는 "}
+	14.31%{content:"아름다운 바다 숨 쉬는 ㅇ"}
+	14.84%{content:"아름다운 바다 숨 쉬는 여"}
+	15.37%{content:"아름다운 바다 숨 쉬는 연"}
+	15.9%{content:"아름다운 바다 숨 쉬는 연ㅇ"}
+	16.43%{content:"아름다운 바다 숨 쉬는 연아"}
+	16.96%{content:"아름다운 바다 숨 쉬는 연안"}
+	17.49%{content:"아름다운 바다 숨 쉬는 연안 "}
+	18.02%{content:"아름다운 바다 숨 쉬는 연안 ㅇ"}
+	18.55%{content:"아름다운 바다 숨 쉬는 연안 여"}
+	19.08%{content:"아름다운 바다 숨 쉬는 연안 엿"}
+	19.61%{content:"아름다운 바다 숨 쉬는 연안 여수"}
+	20.14%{content:"아름다운 바다 숨 쉬는 연안 여수"}
+	20.67%{content:"아름다운 바다 숨 쉬는 연안 여수"}
+	21.2%{content:"아름다운 바다 숨 쉬는 연안 여ㅅ"}
+	21.73%{content:"아름다운 바다 숨 쉬는 연안 여"}
+	22.26%{content:"아름다운 바다 숨 쉬는 연안 "}
+	22.79%{content:"아름다운 바다 숨 쉬는 연안"}
+	23.32%{content:"아름다운 바다 숨 쉬는 연"}
+	23.85%{content:"아름다운 바다 숨 쉬는 "}
+	24.38%{content:"아름다운 바다 숨 쉬는"}
+	24.91%{content:"아름다운 바다 숨 쉬"}
+	25.44%{content:"아름다운 바다 숨 "}
+	25.97%{content:"아름다운 바다 숨"}
+	26.5%{content:"아름다운 바다 "}
+	27.03%{content:"아름다운 바"}
+	27.56%{content:"아름다운 "}
+	28.09%{content:"아름다운"}
+	28.62%{content:"아름다"}
+	29.15%{content:"아름"}
+	29.68%{content:"아"}
+	30.21%{content:"ㅅ"}
+	30.74%{content:"새"}
+	31.27%{content:"생"}
+	31.8%{content:"생ㅁ"}
+	32.33%{content:"생며"}
+	32.86%{content:"생명"}
+	33.39%{content:"생명ㅇ"}
+	33.92%{content:"생명으"}
+	34.45%{content:"생명의"}
+	34.98%{content:"생명의 "}
+	35.51%{content:"생명의 ㅍ"}
+	36.04%{content:"생명의 푸"}
+	36.57%{content:"생명의 풀"}
+	37.1%{content:"생명의 푸르"}
+	37.63%{content:"생명의 푸를"}
+	38.16%{content:"생명의 푸르르"}
+	38.69%{content:"생명의 푸르름"}
+	39.22%{content:"생명의 푸르름 "}
+	39.75%{content:"생명의 푸르름 ㄱ"}
+	40.28%{content:"생명의 푸르름 가"}
+	40.81%{content:"생명의 푸르름 갇"}
+	41.34%{content:"생명의 푸르름 가드"}
+	41.87%{content:"생명의 푸르름 가득"}
+	42.4%{content:"생명의 푸르름 가득ㅎ"}
+	42.93%{content:"생명의 푸르름 가득하"}
+	43.46%{content:"생명의 푸르름 가득한"}
+	43.99%{content:"생명의 푸르름 가득한 "}
+	44.52%{content:"생명의 푸르름 가득한 ㅇ"}
+	45.05%{content:"생명의 푸르름 가득한 여"}
+	45.58%{content:"생명의 푸르름 가득한 엿"}
+	46.11%{content:"생명의 푸르름 가득한 여수"}
+	46.64%{content:"생명의 푸르름 가득한 여수"}
+	47.17%{content:"생명의 푸르름 가득한 여수"}
+	47.7%{content:"생명의 푸르름 가득한 여ㅅ"}
+	48.23%{content:"생명의 푸르름 가득한 여"}
+	48.76%{content:"생명의 푸르름 가득한 "}
+	49.29%{content:"생명의 푸르름 가득한"}
+	49.82%{content:"생명의 푸르름 가득"}
+	50.35%{content:"생명의 푸르름 가"}
+	50.88%{content:"생명의 푸르름 "}
+	51.41%{content:"생명의 푸르름"}
+	51.94%{content:"생명의 푸르"}
+	52.47%{content:"생명의 푸"}
+	53%{content:"생명의 "}
+	53.53%{content:"생명의"}
+	54.06%{content:"생명"}
+	54.59%{content:"생"}
+	55.12%{content:"ㅇ"}
+	55.65%{content:"이"}
+	56.18%{content:"일"}
+	56.71%{content:"일ㅅ"}
+	57.24%{content:"일사"}
+	57.77%{content:"일상"}
+	58.3%{content:"일상ㅇ"}
+	58.83%{content:"일상에"}
+	59.36%{content:"일상엣"}
+	59.89%{content:"일상에서"}
+	60.42%{content:"일상에서 "}
+	60.95%{content:"일상에서 ㅅ"}
+	61.48%{content:"일상에서 수"}
+	62.01%{content:"일상에서 쉬"}
+	62.54%{content:"일상에서 쉼"}
+	63.07%{content:"일상에서 쉼ㅍ"}
+	63.6%{content:"일상에서 쉼표"}
+	64.13%{content:"일상에서 쉼표 "}
+	64.66%{content:"일상에서 쉼표 ㅎ"}
+	65.19%{content:"일상에서 쉼표 하"}
+	65.72%{content:"일상에서 쉼표 한"}
+	66.25%{content:"일상에서 쉼표 하나"}
+	66.78%{content:"일상에서 쉼표 하나 "}
+	67.31%{content:"일상에서 쉼표 하나 ㅇ"}
+	67.84%{content:"일상에서 쉼표 하나 여"}
+	68.37%{content:"일상에서 쉼표 하나 엿"}
+	68.9%{content:"일상에서 쉼표 하나 여수"}
+	69.43%{content:"일상에서 쉼표 하나 여수"}
+	69.96%{content:"일상에서 쉼표 하나 여수"}
+	70.49%{content:"일상에서 쉼표 하나 여ㅅ"}
+	71.02%{content:"일상에서 쉼표 하나 여"}
+	71.55%{content:"일상에서 쉼표 하나 "}
+	72.08%{content:"일상에서 쉼표 하나"}
+	72.61%{content:"일상에서 쉼표 하"}
+	73.14%{content:"일상에서 쉼표 "}
+	73.67%{content:"일상에서 쉼표"}
+	74.2%{content:"일상에서 쉼"}
+	74.73%{content:"일상에서 "}
+	75.26%{content:"일상에서"}
+	75.79%{content:"일상에"}
+	76.32%{content:"일상"}
+	76.85%{content:"일"}
+	77.38%{content:"ㅎ"}
+	77.91%{content:"호"}
+	78.44%{content:"화"}
+	78.97%{content:"활"}
+	79.5%{content:"활ㄹ"}
+	80.03%{content:"활려"}
+	80.56%{content:"활력"}
+	81.09%{content:"활력 "}
+	81.62%{content:"활력 ㅇ"}
+	82.15%{content:"활력 이"}
+	82.68%{content:"활력 있"}
+	83.21%{content:"활력 있ㄱ"}
+	83.74%{content:"활력 있고"}
+	84.27%{content:"활력 있고 ㅇ"}
+	84.8%{content:"활력 있고 아"}
+	85.33%{content:"활력 있고 알"}
+	85.86%{content:"활력 있고 아르"}
+	86.39%{content:"활력 있고 아름"}
+	86.92%{content:"활력 있고 아름ㄷ"}
+	87.45%{content:"활력 있고 아름다"}
+	87.98%{content:"활력 있고 아름당"}
+	88.51%{content:"활력 있고 아름다우"}
+	89.04%{content:"활력 있고 아름다우"}
+	89.57%{content:"활력 있고 아름다운 "}
+	90.1%{content:"활력 있고 아름다운 ㅇ"}
+	90.63%{content:"활력 있고 아름다운 여"}
+	91.16%{content:"활력 있고 아름다운 엿"}
+	91.69%{content:"활력 있고 아름다운 여수"}
+	92.22%{content:"활력 있고 아름다운 여수"}
+	92.75%{content:"활력 있고 아름다운 여수"}
+	93.28%{content:"활력 있고 아름다운 여ㅅ"}
+	93.81%{content:"활력 있고 아름다운 여"}
+	94.34%{content:"활력 있고 아름다운 "}
+	94.87%{content:"활력 있고 아름다운"}
+	95.4%{content:"활력 있고 아름다"}
+	95.93%{content:"활력 있고 아름"}
+	96.46%{content:"활력 있고 아"}
+	96.99%{content:"활력 있고 "}
+	97.52%{content:"활력 있고"}
+	98.05%{content:"활력 있"}
+	98.58%{content:"활력 "}
+	99.11%{content:"활력"}
+	99.64%{content:"활"}
+}
+
+#page1 {height:880px;position:relative;}
+#page1 > h1 {margin-top:90px;margin-bottom:30px;text-align:center;font-size:30px;font-weight:normal;} 
+#page1 > p {font-size:18px;text-align:center;margin-bottom:45px;}
+#page1 > .slide {position:absolute;overflow-x:hidden;left:0;right:0;bottom:0;}
+#page1 > .slide > ul {width:200%;height:100%;display:flex;align-items:center;transition:.5s;}
+#page1 > .slide li {width:10%;height:100%;float:left;transition:.5s;}
+#page1 > .slide li > label {width:100%;height:100%;transition:.5s;}
+#page1 > .slide li .img_wrap {height:530px;transition:.5s;}
+#page1 > .slide li:nth-child(1) .img_wrap {background:url(../images/slide_1.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(2) .img_wrap {background:url(../images/slide_2.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(3) .img_wrap {background:url(../images/slide_3.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(4) .img_wrap {background:url(../images/slide_4.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(5) .img_wrap {background:url(../images/slide_5.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(6) .img_wrap {background:url(../images/slide_6.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(7) .img_wrap {background:url(../images/slide_7.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(8) .img_wrap {background:url(../images/slide_8.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(9) .img_wrap {background:url(../images/slide_9.jpg) no-repeat center / cover;}
+#page1 > .slide li:nth-child(10) .img_wrap {background:url(../images/slide_10.jpg) no-repeat center / cover;}
+#page1 > .slide li .text {overflow:hidden;padding:20px 20px;height:30px;background:#000;opacity:.5s;transition:.5s;position:relative;}
+#page1 > .slide li .text > h2 {color:#fff;font-size:25px;padding-bottom:20px;}
+#page1 > .slide li .text > p {color:#aaa;font-size:18px;}
+#page1 > .slide li .text > p.address {font-size:13px;}
+
+section:not(#page1) {padding:0 calc((100% - 1435px) / 2);}
+section:not(#page1) > p {padding-top:70px;font-size:13px;color:#5acad1;padding-bottom:10px;}
+section:not(#page1) > h1 {padding-bottom:80px;font-size:27px;}
+
+/*page2*/
+#page2 {height:1426px;}
+#page2 .more_btn {opacity:0;}
+#page2 > .gallery {width:100%;height:990px;}
+#page2 > .gallery > div {width:100%;height:490px;}
+#page2 > .gallery > div, #page2 .top > .left {display:flex;justify-content:space-between;}
+#page2 > .gallery, #page2 .top > .left, #page2 .bottom > .right {display:flex;flex-wrap:wrap;align-content:space-between;}
+#page2 .top > .left {width:1000px;height:100%;}
+#page2 .top > .left > div:nth-child(1) {width:278px;height:290px;background:url(../images/gallery_1.jpg) no-repeat center / cover;}
+#page2 .top > .left > div:nth-child(2) {width:350px;height:290px;background:url(../images/gallery_2.jpg) no-repeat center / cover;}
+#page2 .top > .left > div:nth-child(3) {width:350px;height:290px;background:url(../images/gallery_3.jpg) no-repeat center / cover;}
+#page2 .top > .left > div:nth-child(4) {width:278px;height:190px;background:url(../images/gallery_5.jpg) no-repeat center / cover;}
+#page2 .top > .left > div:nth-child(5) {width:710px;height:190px;background:url(../images/gallery_6.jpg) no-repeat center / cover;}
+#page2 .top > .right {width:422px;height:100%;background:url(../images/gallery_4.jpg) no-repeat center / cover;}
+#page2 .bottom > .left {width:638px;height:100%;background:url(../images/gallery_7.jpg) no-repeat center / cover;}
+#page2 .bottom > .right {width:782px;height:100%;}
+#page2 .bottom > .right > div {width:100%;height:240px;}
+#page2 .bottom > .right > div:nth-child(1) {background:url(../images/gallery_8.jpg) no-repeat center / cover;}
+#page2 .bottom > .right > div:nth-child(2) {background:url(../images/gallery_9.jpg) no-repeat center / cover;}
+
+#page3 {height:982px;background:url(../images/background.jpg) no-repeat center / cover;position:relative;}
+#page3:before {content:"";display:block;position:absolute;top:0;right:0;bottom:0;left:0;background:#fff;opacity:.2;z-index:20;}
+#page3 > * {position:relative;z-index:30;}
+#page3 > .scroll {width:100%;height:550px;display:flex;justify-content:space-between;}
+#page3 > .scroll > div {height:100%;}
+#page3 > .scroll > .left {width:652px;overflow:auto;padding-right:10px;}
+#page3 > .scroll > .left::-webkit-scrollbar {opacity:0;width:10px;}
+#page3 > .scroll > .left::-webkit-scrollbar-thumb {background:#888888;border-radius:5px;}
+#page3 > .scroll > .left > label {width:100%;height:150px;background:#000;border-radius:10px;color:#fff;opacity:.9;display: inline-block;position:relative;z-index:10;}
+#page3 > .scroll > .left > label:nth-child(1) {z-index:30;}
+#page3 > .scroll > .left > label:not([for="scroll6"]) {margin-bottom:20px;}
+#page3 > .scroll > .left > label > .border {width:100%;height:100%;border-radius:10px;border:5px solid #fff; box-sizing: border-box;position:absolute;transition:.5s;z-index:100;}
+#page3 > .scroll > .left > label > .text {width:100%;height:100%;position:absolute;top:0;bottom:0;right:0;left:0;text-align:center;line-height:150px;font-size:30px;z-index:40;}
+#page3 > .scroll > .right {width:670px;border-radius:5px;overflow:hidden;}
+#page3 > .scroll > .right > div {width:100%;position:relative;}
+#page3 > .scroll > .right > div > div {position:absolute;top:0;bottom:0;right:0;left:0;opacity:0;transition:.5s;}
+#page3 > .scroll > .right > .top {height:100px;background:#1e90ff;}
+#page3 > .scroll > .right > .top > div {color:#fff;padding-left:50px;width:calc(100% - 50px);line-height:100px;font-size:30px;}
+#page3 > .scroll > .right > .content {height:450px;background:#fff;}
+#page3 > .scroll > .right > .content > div {padding:45px;width:calc(100% - 90px);height:calc(100% - 90px);}
+#page3 > .scroll > .right > .content .course {font-size:25px;line-height:50px;}
+#page3 > .scroll > .right > .content .btm {position:absolute;bottom:45px;width:100%;opacity:.5;}
+#page3 > .scroll > .right > .content .btm > * {float:left;}
+#page3 > .scroll > .right > .content .btm > .time {margin-right:30px;}
+
+#scroll1:checked ~ .scroll > .left .border {transform:inherit;}
+#scroll1:checked ~ .scroll > .right > div > div:nth-child(1) {opacity:1;}
+#scroll2:checked ~ .scroll > .left .border {transform:translateY(174px);}
+#scroll2:checked ~ .scroll > .right > div > div:nth-child(2) {opacity:1;}
+#scroll3:checked ~ .scroll > .left .border {transform:translateY(348px);}
+#scroll3:checked ~ .scroll > .right > div > div:nth-child(3) {opacity:1;}
+#scroll4:checked ~ .scroll > .left .border {transform:translateY(522px);}
+#scroll4:checked ~ .scroll > .right > div > div:nth-child(4) {opacity:1;}
+#scroll5:checked ~ .scroll > .left .border {transform:translateY(696px);}
+#scroll5:checked ~ .scroll > .right > div > div:nth-child(5) {opacity:1;}
+#scroll6:checked ~ .scroll > .left .border {transform:translateY(870px);}
+#scroll6:checked ~ .scroll > .right > div > div:nth-child(6) {opacity:1;}
+
+
+#footer {height:300px;display:flex;}
+#footer > div {height:100%;}
+#footer > .left {background:#fff;width:50%;}
+#footer > .left > * {transform:translateX(235px);}
+#footer > .left > p {font-size:25px;padding-top:50px;margin-bottom:25px;}
+#footer > .left > input {width:540px;height:40px;line-height:40px;border:none;border-bottom:1px solid #444;color:#aaa;}
+#footer > .right {background:#3d3d3d;padding-left:192px;width:calc(50% - 192px);}
+#footer > .right > * {color:#fff;}
+#footer > .right > ul {width:94px;padding:0 123px;display:flex;justify-content: space-between;padding-top:120px;}
