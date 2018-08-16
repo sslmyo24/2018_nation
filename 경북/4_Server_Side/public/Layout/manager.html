@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SKILLS LOGISTICS</title>
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="js/jquery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery/jquery-3.3.1/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <script type="text/javascript">
+   $(function(){
+    $('#date').datepicker({
+      dateFormat : 'yy년 mm월 dd일',
+      minDate : +1
+    });
+  });
+  </script>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="logo">
+    </a>
+    <!-- header-menu -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="col-12 text-right" style="color: #fff">
+        [아이디 : admin@admin.com] / [회원구분 : 고객사]
+      </div>
+    </div>
+  </nav>
+
+  <!-- navigation -->
+  <div class="navigation">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="로그인">
+          <a class="nav-link" href="login.html">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">로그인</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="회원가입">
+          <a class="nav-link" href="join.html">
+            <i class="fa fa-fw fa-sign-in"></i>
+            <span class="nav-link-text">회원가입</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="물류배송신청">
+          <a class="nav-link" href="contract.html">
+            <i class="fa fa-fw fa-pencil-square-o"></i>
+            <span class="nav-link-text">물류배송신청</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="물류배송추적">
+          <a class="nav-link" href="delivery.html">
+            <i class="fa fa-fw fa-truck"></i>
+            <span class="nav-link-text">물류배송추적</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="지입차량주POS">
+          <a class="nav-link" href="manager.html">
+            <i class="fa fa-fw fa-th-large"></i>
+            <span class="nav-link-text">지입차량주POS</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="관리자POS">
+          <a class="nav-link" href="adminpos.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">관리자POS</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="container-fluid p-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">홈</a>
+        </li>
+        <li class="breadcrumb-item active">지입차량주POS</li>
+      </ol>
+    
+      <!-- content-start -->
+      <div class="card card-register mx-auto mt-5" style="max-width: 80rem">
+        <div class="card-header">물류배송신청검색</div>
+        <div class="card-body">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group col-12">
+              <input class="form-control" id="date" type="text" placeholder="배송일검색" readonly="readonly">
+              <span class="input-group-append">
+                <button class="btn btn-primary" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mx-auto mt-5" style="max-width: 80rem">
+        <div class="card">
+          <div class="card-header">물류배송신청목록</div>
+          <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap text-center table-bordered" >
+              <thead>
+                <tr>
+                  <th class="w-1">No.</th>
+                  <th>배송일</th>
+                  <th>배송정보</th>
+                  <th>배송지역</th>
+                  <th>총 배송중량</th>
+                  <th>총 배송거리</th>
+                  <th>배송경로</th>
+                  <th>Order인수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="5" class="w-1">1</td>
+                  <td rowspan="5">2018년 10월 06일</td>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1234</p>
+                    <p class="m-0">아이디 : user1@user1.com</p>
+                    <p class="m-0">회사명 : 유저1컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1234</p>
+                    <p class="m-0">배송중량 : 4톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>서울</td>
+                  <td rowspan="5">8톤</td>
+                  <td rowspan="5">240km</td>
+                  <td rowspan="5">
+                    <label class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked="checked">
+                      <span class="custom-control-label">서울-충남-대전-경기-전북</span>
+                    </label>
+                  </td>
+                  <td rowspan="5">
+                    <button href="truck-info.html" class="btn btn-primary btn-sm">인수하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1235</p>
+                    <p class="m-0">아이디 : user2@user2.com</p>
+                    <p class="m-0">회사명 : 유저2컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1235</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>충남</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1236</p>
+                    <p class="m-0">아이디 : user3@user3.com</p>
+                    <p class="m-0">회사명 : 유저3컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1236</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>대전</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1237</p>
+                    <p class="m-0">아이디 : user4@user4.com</p>
+                    <p class="m-0">회사명 : 유저4컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1237</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>경기</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1238</p>
+                    <p class="m-0">아이디 : user5@user5.com</p>
+                    <p class="m-0">회사명 : 유저4컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1238</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>전북</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="mx-auto mt-5" style="max-width: 80rem">
+        <div class="card">
+          <div class="card-header">배송리스트</div>
+          <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap text-center table-bordered" >
+              <thead>
+                <tr>
+                  <th class="w-1">No.</th>
+                  <th>배송일</th>
+                  <th>배송정보</th>
+                  <th>배송지역</th>
+                  <th>총 배송중량</th>
+                  <th>총 배송거리</th>
+                  <th>배송경로</th>
+                  <th>배송상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="5" class="w-1">1</td>
+                  <td rowspan="5">2018년 10월 06일</td>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1234</p>
+                    <p class="m-0">아이디 : user1@user1.com</p>
+                    <p class="m-0">회사명 : 유저1컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1234</p>
+                    <p class="m-0">배송중량 : 4톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>서울</td>
+                  <td rowspan="5">8톤</td>
+                  <td rowspan="5">240km</td>
+                  <td rowspan="5">
+                    <div class="selectgroup selectgroup-pills">
+                        <label class="selectgroup-item m-0">
+                          <input type="checkbox" name="value" value="HTML" class="selectgroup-input" checked="" disabled="">
+                          <span class="selectgroup-button">
+                            <p class="m-0">서울</p>
+                            배송완료
+                          </span>
+                        </label>
+                        <p class="m-0">▼</p>
+                        <label class="selectgroup-item m-0">
+                          <input type="checkbox" name="value" value="HTML" class="selectgroup-input" checked="" disabled="">
+                          <span class="selectgroup-button">
+                            <p class="m-0">충남</p>
+                            배송완료
+                          </span>
+                        </label>
+                         <p class="m-0">▼</p>
+                        <label class="selectgroup-item m-0">
+                          <input type="checkbox" name="value" value="HTML" class="selectgroup-input">
+                          <span class="selectgroup-button">
+                            <p class="m-0">대전</p>
+                            배송완료
+                          </span>
+                        </label>
+                         <p class="m-0">▼</p>
+                        <label class="selectgroup-item m-0">
+                          <input type="checkbox" name="value" value="HTML" class="selectgroup-input">
+                          <span class="selectgroup-button">
+                            <p class="m-0">경기</p>
+                            배송완료
+                          </span>
+                        </label>
+                         <p class="m-0">▼</p>
+                        <label class="selectgroup-item m-0">
+                          <input type="checkbox" name="value" value="HTML" class="selectgroup-input">
+                          <span class="selectgroup-button">
+                            <p class="m-0">전북</p>
+                            배송완료
+                          </span>
+                        </label>
+                    </div>
+                  </td>
+                  <td rowspan="5">
+                    <button href="truck-info.html" class="btn btn-primary btn-sm">배송하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1235</p>
+                    <p class="m-0">아이디 : user2@user2.com</p>
+                    <p class="m-0">회사명 : 유저2컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1235</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>충남</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1236</p>
+                    <p class="m-0">아이디 : user3@user3.com</p>
+                    <p class="m-0">회사명 : 유저3컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1236</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>대전</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1237</p>
+                    <p class="m-0">아이디 : user4@user4.com</p>
+                    <p class="m-0">회사명 : 유저4컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1237</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>경기</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <p class="m-0">배송번호 : 20181001-A101217-1238</p>
+                    <p class="m-0">아이디 : user5@user5.com</p>
+                    <p class="m-0">회사명 : 유저4컴퍼니</p>
+                    <p class="m-0">전화번호 : 123-1234-1238</p>
+                    <p class="m-0">배송중량 : 1톤</p>
+                    <p class="m-0">신청일자 : 2018년 10월 01일</p>
+                  </td>
+                  <td>전북</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- content-end -->
+
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <div class="text-center">
+          <small>Copyright © Your Website 2018</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
