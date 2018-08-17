@@ -79,7 +79,7 @@
                 <?php foreach($menuList as $data): ?>
                         <tr class="text-center">
                           <td>
-                            <?php $data->name ?>
+                            <?php echo $data->name ?>
                           </td>
                           <td data-price="<?php echo $data->price ?>">
                             <?php echo number_format($data->price) ?>원
