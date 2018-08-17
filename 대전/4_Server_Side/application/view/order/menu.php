@@ -61,7 +61,7 @@
 
                 <div class="col-12">
                 <div class="mb-2 text-right">
-                  <button type="submit" class="btn btn-primary" onclick="window.location='order-review.html'">리뷰보기<span class="badge badge-primary">25개</span></button>
+                  <button type="submit" class="btn btn-primary" onclick="window.location='<?php echo HOME ?>/order/review'">리뷰보기<span class="badge badge-primary">25개</span></button>
                 </div>
                 <div class="card">
                   <div class="table-responsive">
