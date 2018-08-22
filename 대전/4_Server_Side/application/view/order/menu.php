@@ -52,7 +52,11 @@
 
                 <div class="col-12">
                 <div class="mb-2 text-right">
+<<<<<<< HEAD
                   <button type="submit" class="btn btn-primary" onclick="window.location='<?php echo HOME ?>/order/review/?idx=<?php echo $_GET['idx'] ?>'">리뷰보기<span class="badge badge-primary"><?php echo $reviewCnt; ?>개</span></button>
+=======
+                  <button type="submit" class="btn btn-primary" onclick="window.location='<?php echo HOME ?>/order/review'">리뷰보기<span class="badge badge-primary">25개</span></button>
+>>>>>>> 6a777819c62326429a36bfcdd6b44af0ad2ba2c6
                 </div>
                 <div class="card">
                   <div class="table-responsive">
@@ -68,6 +72,7 @@
                       </thead>
                       <tbody>
                 <?php foreach($menuList as $data): ?>
+<<<<<<< HEAD
                         <form method="post">
                         	<input type="hidden" name="action" value="addCart">
                         	<input type="hidden" name="idx" value="<?php echo $data->idx ?>">
@@ -89,6 +94,25 @@
                         	  </td>
                         	</tr>
                         </form>
+=======
+                        <tr class="text-center">
+                          <td>
+                            <?php echo $data->name ?>
+                          </td>
+                          <td data-price="<?php echo $data->price ?>">
+                            <?php echo number_format($data->price) ?>원
+                          </td>
+                          <td style="width: 10%">
+                            <input type="number" class="form-control qt" placeholder="1" min="1" value="1">
+                          </td>
+                          <td style="width: 20%">
+                            <input type="text" class="form-control text-right price" readonly="readonly" value="<?php echo $data->price ?>">
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-secondary btn-space">주문함담기</button>
+                          </td>
+                        </tr>
+>>>>>>> 6a777819c62326429a36bfcdd6b44af0ad2ba2c6
                 <?php endforeach ?>
                       </tbody>
                     </table>
