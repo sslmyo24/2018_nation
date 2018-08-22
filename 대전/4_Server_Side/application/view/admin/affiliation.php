@@ -147,35 +147,39 @@
                             <td><?php echo $data->name ?></td>
                             <td><?php echo $data->tel ?></td>
                             <td>(<?php echo $data->x_location.", ".$data->y_location ?>)</td>
-                            <td>
+                            <td style="margin:0;padding:0;width:144px;">
                             <?php
                             $menuArr = explode("/",$data->menu);
                             for($i = 0; $i < count($menuArr); $i++):
                             ?>
-                              <div><?php echo $menuArr[$i]; ?></div>
-                            </td>
+                              <div style="border-bottom:1px solid #dee2e6;width:144px;"><?php echo $menuArr[$i]; ?></div>
                           <?php endfor; ?>
-                            <td>
+                            </td>
+                            <td style="margin:0;padding:0;width:38px;">
                             <?php
                             $quantityArr = explode("/",$data->quantity);
                             for($i = 0; $i < count($quantityArr); $i++):
                             ?>
-                              <div><?php echo $quantityArr[$i]; ?>개</div>
-                            </td>
+                              <div style="border-bottom:1px solid #dee2e6;width:38px;"><?php echo $quantityArr[$i]; ?>개</div>
                           <?php endfor; ?>
-                            <td>
+                            </td>
+                            <td style="margin:0;padding:0;width:82px;">
                             <?php
                             $total_price = 0;
                             $priceArr = explode("/",$data->price);
                             for($i = 0; $i < count($priceArr); $i++):
                               $total_price += $priceArr[$i];
                             ?>
-                              <div><?php echo number_format($priceArr[$i]); ?>원</div>
-                            </td>
+                              <div style="border-bottom:1px solid #dee2e6;width:82px;"><?php echo number_format($priceArr[$i]); ?>원</div>
                           <?php endfor; ?>
+                            </td>
                             <td><?php echo number_format($total_price); ?>원</td>
                             <td>
-                              <button type="button" class="btn btn-secondary btn-space">배송</button>
+                        <?php if($data->state == "shipping"): ?>
+                              <button type="button" class="btn btn-secondary btn-space" onclick="location.replace('<?php echo HOME ?>/admin/delivery/?idx=<?php echo $data->idx ?>')">배송</button>
+                        <?php else: ?>
+                            배송완료
+                        <?php endif; ?>
                             </td>
                           </tr>
                     <?php endforeach; ?>
@@ -192,13 +196,16 @@
                   <div class="card mt-7">
                     <div class="card-header">
                       <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">가맹점 메뉴목록</h3>
-                      <div class="col text-right">
-                        <select class="custom-select col-2">
-                          <option value="">가맹회원선택</option>
-                          <option value="" selected="">피자스타</option>
-                          <option value="">도레미피자</option>
-                        </select>
-                        <button type="button" class="btn btn-secondary btn-space">확인</button>
+                        <div class="col text-right">
+                         <form method="get">
+                          <select class="custom-select col-2" name="idx">
+                            <option value="">가맹회원선택</option>
+                             <?php foreach ($franList as $data):?>
+                            <option value="<?php echo $data->idx ?>" <?php if(isset($_GET['idx']) && $_GET['idx'] == $data->idx) echo "selected"; ?>"><?php echo $data->name ?></option>
+                             <?php endforeach; ?>
+                          </select>
+                          <button type="submit" class="btn btn-secondary btn-space">확인</button>
+                        </form>
                       </div>
                     </div>
                     <div class="card-body1 p-5">
@@ -209,32 +216,22 @@
                             <th>메뉴이름</th>
                             <th>가격</th>
                             <th>판매수량</th>
-                           
                           </tr>
                         </thead>
                         <tbody>
+                  <?php foreach ($menuList as $data): ?>
                           <tr>
                             <td class="text-center">
-                              쉬림프 피자
+                              <?php echo $data->name ?>
                             </td>
                             <td class="text-center">
-                             18,000원
+                             <?php echo number_format($data->price) ?>원
                             </td>
                             <td class="text-center">
-                              320개 
+                              <?php echo number_format($data->quantity) ?>개
                             </td>
                           </tr>
-                          <tr>
-                            <td class="text-center">
-                              고구마무스 피자
-                            </td>
-                            <td class="text-center">
-                             23,000원
-                            </td>
-                            <td class="text-center">
-                              523개 
-                            </td>
-                          </tr>
+                  <?php endforeach; ?>
                         </tbody>
                       </table>
                     </div>
@@ -258,41 +255,27 @@
                           </tr>
                         </thead>
                         <tbody>
+                  <?php $i = 1;
+                  foreach ($allMenuList as $data):?>
                           <tr>
                             <td class="text-center" style="width: 5%">
-                              1위
+                              <?php echo $i ?>위
                             </td>
                             <td class="text-center">
-                             피자스타
+                             <?php echo $data->franchisee ?>
                             </td>
                             <td class="text-center">
-                              고구마무스 피자 
+                              <?php echo $data->name ?>
                             </td>
                             <td class="text-center">
-                              23,000원
+                              <?php echo number_format($data->price) ?>원
                             </td>
                             <td class="text-center">
-                              523개
+                              <?php echo $data->quantity ?>개
                             </td>
                           </tr>
-                          <tr>
-                            <td class="text-center" style="width: 5%">
-                              2위
-                            </td>
-                            <td class="text-center">
-                              피자스타
-                            </td>
-                            <td class="text-center">
-                              쉬림프 피자
-                            </td>
-                            <td class="text-center">
-                              18,000원
-                            </td>
-                            <td class="text-center">
-                              320개
-                            </td>
-                          </tr>
-                          
+                  <?php $i++;
+                endforeach; ?>
                         </tbody>
                       </table>
                     </div>

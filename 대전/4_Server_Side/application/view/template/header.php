@@ -40,7 +40,7 @@
                     <a href="<?php echo HOME ?>/member/logout" class="nav-link"><i class="fe fe-log-out"></i> 로그아웃</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo HOME ?>/member/myinfomodify" class="nav-link"><i class="fe fe-user-plus"></i> 내 정보변경</a>
+                    <a href="<?php echo HOME ?>/member/myinfomodify" class="nav-link" <?php if($this->param->include_file == "myinfomodify") echo 'active'; ?>><i class="fe fe-user-plus"></i> 내 정보변경</a>
                   </li>
             <?php else: ?>
                   <li class="nav-item">
