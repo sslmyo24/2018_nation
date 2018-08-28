@@ -15,13 +15,16 @@
           <?php if($param->member->level == "AD"): ?>
                 <!-- 관리자모드 -->
                 <div class="col-6 mb-2 text-right">
-                  <select class="custom-select col-4">
-                    <option value="">회원검색</option>
-              <?php foreach ($memberList as $member): ?>
-                    <option value="<?php echo $member->idx ?>"><?php echo $member->name ?>[<?php echo $member->id ?>]</option>
-              <?php endforeach; ?>
-                  </select>
-                  <button type="button" class="btn btn-secondary btn-space">확인</button>
+                  <form method="get">
+                    <input type="hidden">
+                    <select class="custom-select col-4" name="idx">
+                      <option value="">회원검색</option>
+                                  <?php foreach ($memberList as $member): ?>
+                      <option value="<?php echo $member->idx ?>" <?php if(isset($_GET['idx']) && $_GET['idx'] == $member->idx) echo "selected"; ?>><?php echo $member->name ?>[<?php echo $member->id ?>]</option>
+                                  <?php endforeach; ?>
+                    </select>
+                    <button class="btn btn-secondary btn-space">확인</button>
+                  </form>
                 </div>
           <?php endif; ?>
                 <div class="col-12">

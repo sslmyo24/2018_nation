@@ -64,7 +64,7 @@
 		}
 
 		function getAllMenuList(){
-			$list = $this->fetchAll("SELECT m.*, f.name as franchisee FROM menu m JOIN franchisee f ON f.idx = m.fidx order by quantity desc");
+			$list = $this->fetchAll("SELECT m.*, f.name as franchisee FROM menu m JOIN franchisee f ON f.idx = m.fidx order by quantity desc limit 5");
 			return $list;
 		}
 	}

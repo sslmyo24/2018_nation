@@ -4,14 +4,14 @@
 		 * login page
 		 */
 		function login(){
-			access(!$this->param->isMember,"비회원만 접근가능합니다.");
+			access(!$this->param->isMember,"비회원만 접근가능합니다.",HOME."/main");
 		}
 		
 		/**
 		 * Join page
 		 */
 		function join(){
-			access(!$this->param->isMember,"비회원만 접근가능합니다.");
+			access(!$this->param->isMember,"비회원만 접근가능합니다.",HOME."/main");
 		}
 
 		/**
@@ -27,6 +27,6 @@
 		 * Myinfomodify page
 		 */
 		function myinfomodify(){
-			access($this->param->isMember,"회원만 접근가능합니다.");
+			access($this->param->isMember,"회원만 접근가능합니다.",HOME."/main");
 		}
 	}

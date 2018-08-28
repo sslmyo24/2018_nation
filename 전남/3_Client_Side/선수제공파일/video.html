@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/css.css">
+</head>
+<body>
+	<header>
+		<div class="head">
+			<h1>
+				<a href="./index.html">YEOSU STREAMING</a>
+			</h1>
+		</div>
+		<div class="search">
+			<div>
+				<input type="text" placeholder="검색">
+				<button><img src="./images/search.png" alt="icon"></button>
+			</div>
+		</div>
+		<div id="user">
+			<a href="./join.html" class="page">회원가입</a>
+			<a href="./login.html" class="page">로그인</a>
+		</div>
+	</header>
+	<div class="video_user">
+		<div>
+			<div></div>
+			<a href="./user.html?user=4">
+				<img src="./images/image.jpg" alt="user_profile">
+				<span class="name">사랑내기</span>
+			</a>
+			<span>팔로워 <span class="follow_count">97,763</span></span>
+			<button class="follow" data-user="">팔로우</button>
+		</div>
+	</div>
+	<div class="video_wrap">
+		<div class="video">
+			<div>
+				<video src="" id="main_video"></video>
+				<div class="video_btn">
+					<img src="./images/play.png" alt="" class="play play_">
+					<img src="./images/pause.png" alt="" class="pause play_">
+					<img src="./images/volume.png" alt="" class="volume volume_">
+					<img src="./images/volume_off.png" alt="" class="volume_off volume_">
+					<div type="range" class="volume_change"></div>
+					<div type="range" id="progress" value="0"></div>
+					<span><span class="now_time">0:0</span>&nbsp;/&nbsp;<span class="full_time">0:0</span></span>
+				</div>
+			</div>
+			<div class="video_contents">
+				<p class="title">엑스포의 멋진 디지털 갤러리 관람! #2 - 사랑내기</p>
+				<p></p>
+				<p class="view">조회수 <span>943,523</span>회</p>
+				<p class="good">
+					<span class="good_btn"><img src="./images/good.png" alt="good"><span>45,421</span></span>
+					<span class="bad_btn"><img src="./images/bad.png" alt="bad"><span>63</span></span>
+				</p>
+			</div>
+			<div class="video_contents__">
+				<p class="update">게시일 : <span>2013.04.20</span></p>
+				<p class="contents">아름다운 여수에서 개최한 엑스포속에 있는 거대한 디지털 갤러리</p>
+			</div>
+			<div class="comments">
+				<p>댓글 <span>2</span>개</p>
+				<textarea id=""></textarea>
+				<span class="comment_btn">작성</span>
+				<hr>
+				<div class="comment">
+					<div>
+						<img src="./images/image.jpg" alt="user_profile">
+					</div>
+					<div>
+						<p>여수사랑</p>
+						<p>여수가 이쁘게 나와서 정말 기뻐요 많은 사람을이 찾아줬으면 해요 ㅎㅎ</p>
+					</div>
+				</div>
+				<div class="comment">
+					<div>
+						<img src="./images/image.jpg" alt="user_profile">
+					</div>
+					<div>
+						<p>낭만</p>
+						<p>와 정말 이쁘게 나왔네요.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="next_video">
+			<a href="./video.html">
+				<div>
+					<img src="./images/image1.jpg" alt="img">
+				</div>
+				<div>
+					<p class="title">여수 홍보</p>
+					<p>여수사랑</p>
+					<p>조회수 43,294회</p>
+				</div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

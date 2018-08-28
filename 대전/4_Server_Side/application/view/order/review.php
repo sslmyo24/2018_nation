@@ -23,7 +23,7 @@
                             <p class="h5">
                               <small><?php echo $data->name ?> (<?php echo str_pad(substr($data->id, 0, 3), strlen($data->id), "*") ?>)</small> 
                               <small>평점 : <?php echo $data->grade ?>점</small> 
-                              <small class="float-right text-muted"><?php date("Y. m. d.",strtotime($data->date)) ?></small>
+                              <small class="float-right text-muted"><?php echo date("Y. m. d.",strtotime($data->date)) ?></small>
                             </p>
                             <p>
                               <?php echo $data->content ?>

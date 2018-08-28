@@ -58,7 +58,7 @@
 		}
 
 		function details(){
-			access($this->param->isMember && $this->param->member->level == "N" || $this->param->member->level == "N","일반회원 또는 관리자만 접근가능합니다.",HOME."/main");
+			access($this->param->isMember && $this->param->member->level == "N" || $this->param->member->level == "AD","일반회원 또는 관리자만 접근가능합니다.",HOME."/main");
 			$this->orderList = $this->model->getOrderList();
 			$this->total_price = 0;
 			foreach ($this->orderList as $data) {
@@ -70,5 +70,9 @@
 
 		function review(){
 			$this->reviewList = $this->model->getReviewList();
+		}
+
+		function write(){
+			access($this->model->rowCount("SELECT * FROM review where midx = '{$this->param->member->idx}' and fidx = '{$_GET['idx']}'","이미 리뷰를 작성하셨습니다."));
 		}
 	}

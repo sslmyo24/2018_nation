@@ -7,7 +7,7 @@
 			access($this->param->isMember && $this->param->member->level == "AD" || $this->param->member->level == "AF","가맹회원 또는 관리자만 접근가능합니다.");
 			if($this->param->member->level == "AF"){
 				$this->franList = $this->model->getList("franchisee"," where midx = '{$this->param->member->idx}'");
-				$this->menuList = $this->model->getList("menu"," where midx = '{$this->param->member->idx}'");
+				$this->menuList = $this->model->getList("menu"," where midx = '{$this->param->member->idx}' order by date desc");
 				$this->orderList = $this->model->getOrderList();
 			}
 			else if($this->param->member->level == "AD"){

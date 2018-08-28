@@ -2,7 +2,6 @@
     $(function(){
       posToggle();
       searchToggle();
-      mapMarker();
     })
   </script>
             <div class="page-header">

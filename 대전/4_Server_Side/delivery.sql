@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- 생성 시간: 18-08-22 10:23
+-- 생성 시간: 18-08-27 04:29
 -- 서버 버전: 10.1.21-MariaDB
 -- PHP 버전: 5.6.30
 
@@ -58,16 +58,18 @@ CREATE TABLE `franchisee` (
   `type` varchar(255) NOT NULL,
   `logo` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `distance` double NOT NULL
+  `distance` double NOT NULL,
+  `cnt` int(11) NOT NULL,
+  `avg_grade` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 테이블의 덤프 데이터 `franchisee`
 --
 
-INSERT INTO `franchisee` (`idx`, `midx`, `type`, `logo`, `name`, `distance`) VALUES
-(1, 3, 'pz', '1534500755_27066.png', '피자알볼로', 285.41373477813),
-(2, 5, 'ck', '1534919066_9194.png', '웰덤치킨', 285.41373477813);
+INSERT INTO `franchisee` (`idx`, `midx`, `type`, `logo`, `name`, `distance`, `cnt`, `avg_grade`) VALUES
+(1, 3, 'pz', '1534500755_27066.png', '피자알볼로', 76.967525619575, 1, 2),
+(2, 5, 'ck', '1534919066_9194.png', '웰덤치킨', 207.57649192527, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -95,7 +97,8 @@ INSERT INTO `member` (`idx`, `id`, `name`, `pw`, `level`, `tel`, `x_location`, `
 (2, 'master', '관리자', '1234', 'AD', '', 0, 0),
 (3, 'oymlss', '피자에땅', 'lss8360', 'AF', '0101-1234-1234', 160, 201),
 (4, 'test', '이름', 'qaz1234', 'N', '0101-1234-1234', 563, 142),
-(5, 'bbqbbq', '비비큐', 'lss8360', 'AF', '0101-1234-1234', 42, 81);
+(5, 'bbqbbq', '비비큐', 'lss8360', 'AF', '0101-1234-1234', 42, 81),
+(6, 'oymmama', '이름이', 'lss8360', 'N', '0101-1234-1234', 433, 305);
 
 -- --------------------------------------------------------
 
@@ -122,7 +125,9 @@ INSERT INTO `menu` (`idx`, `midx`, `fidx`, `name`, `price`, `quantity`, `date`) 
 (4, 3, 1, '토테이토 피자', 11000, 3, '2018-08-17'),
 (6, 5, 2, '양념치킨', 9000, 0, '2018-08-22'),
 (7, 5, 2, '후라이드', 9000, 0, '2018-08-22'),
-(8, 5, 2, '간장치킨', 10000, 0, '2018-08-22');
+(8, 5, 2, '간장치킨', 10000, 0, '2018-08-22'),
+(9, 3, 1, '불고기피자', 12000, 0, '2018-08-23'),
+(10, 3, 1, '칸쇼새우 피자', 13000, 0, '2018-08-23');
 
 -- --------------------------------------------------------
 
@@ -145,26 +150,6 @@ CREATE TABLE `review` (
 
 INSERT INTO `review` (`idx`, `midx`, `fidx`, `grade`, `content`, `date`) VALUES
 (2, 1, 1, 2, 'ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄻㄴㅇㄻㄴㅇㄹ', '2018-08-22');
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `reviewcnt`
--- (See below for the actual view)
---
-CREATE TABLE `reviewcnt` (
-`cnt` bigint(21)
-,`fidx` int(11)
-);
-
--- --------------------------------------------------------
-
---
--- 뷰 구조 `reviewcnt`
---
-DROP TABLE IF EXISTS `reviewcnt`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `reviewcnt`  AS  select count(0) AS `cnt`,`review`.`fidx` AS `fidx` from `review` group by `review`.`fidx` ;
 
 --
 -- 덤프된 테이블의 인덱스
@@ -218,12 +203,12 @@ ALTER TABLE `franchisee`
 -- 테이블의 AUTO_INCREMENT `member`
 --
 ALTER TABLE `member`
-  MODIFY `idx` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idx` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- 테이블의 AUTO_INCREMENT `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `idx` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idx` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- 테이블의 AUTO_INCREMENT `review`
 --
