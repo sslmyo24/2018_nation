@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
 </head>
 <body>
 	<header>
@@ -21,6 +23,10 @@
 		<div id="user">
 			<a href="./join.html" class="page">회원가입</a>
 			<a href="./login.html" class="page">로그인</a>
+			<span class='page logout'>로그아웃</span>
+			<a class='user' href='./user.html'>
+				<img src='./images/image.jpg' alt='profile' class='profile'>
+			</a>
 		</div>
 	</header>
 	<div class="user_wrap">
@@ -28,39 +34,11 @@
 			<img src="./images/image.jpg" alt="user_image">
 			<p class="name">사랑내기</p>
 			<span>팔로워 97,763 명</span>
-			<button class="follow" data-user="">팔로우</button>
+			<button class="follow">팔로우</button>
+			<button class="unfollow">팔로우 해제</button>
+			<button class="upload" onclick="location.href = './upload.html'">업로드</button>
 		</div>
 		<div class="video_list">
-			<a href="./video.html" class="video_box">
-				<div class="video">
-					<img src="./images/image6.jpg" alt="img">
-				</div>
-				<div class="video_contents">
-					<p class="title">여수 해상케이블카 탐험! - 사랑내기</p>
-					<p class="sub">사랑내기</p>
-					<p class="sub">조회수 7,456회</p>
-				</div>
-			</a>
-			<a href="./video.html" class="video_box">
-				<div class="video">
-					<img src="./images/image7.jpg" alt="img">
-				</div>
-				<div class="video_contents">
-					<p class="title">엑스포의 멋진 디지털 갤러리 관람!#1 - 사랑내기</p>
-					<p class="sub">사랑내기</p>
-					<p class="sub">조회수 89,456회</p>
-				</div>
-			</a>
-			<a href="./video.html" class="video_box">
-				<div class="video">
-					<img src="./images/image8.jpg" alt="img">
-				</div>
-				<div class="video_contents">
-					<p class="title">엑스포의 멋진 디지털 갤러리 관람!#2 - 사랑내기</p>
-					<p class="sub">사랑내기</p>
-					<p class="sub">조회수 943,524회</p>
-				</div>
-			</a>
 		</div>
 	</div>
 </body>

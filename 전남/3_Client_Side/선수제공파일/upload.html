@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
 </head>
 <body>
 	<header>
@@ -22,13 +24,18 @@
 		<div id="user">
 			<a href="./join.html" class="page">회원가입</a>
 			<a href="./login.html" class="page">로그인</a>
+			<span class='page logout'>로그아웃</span>
+			<a class='user' href='./user.html'>
+				<img src='./images/image.jpg' alt='profile' class='profile'>
+			</a>
 		</div>
 	</header>
 	<div class="upload_wrap">
-		<div class="upload">
+		<div class="upload" style="position:relative;">
 			<img src="./images/upload.png" alt="icon">
 			<p>업로드할 파일 선택</p>
 			<p>또는 동영상 파일을 드래그 앤 드롭</p>
+			<input type="file" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;z-index:1000">
 		</div>
 		<div class="upload_contents">
 			<div>
@@ -39,8 +46,9 @@
 			</div>
 			<div>
 				<p>영상 표지</p>
-				<div class="image_upload">
+				<div class="image_upload" style="position:relative;">
 					<img class='sumnail' src="./images/img_upload.jpg" alt="이미지를 선택해주세요">
+					<input type="file" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;z-index:1000">
 				</div>
 				<p>카테고리</p>
 				<input type="checkbox" id="cate1" value="오동도">
