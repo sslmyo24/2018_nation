@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<h1>
+				<a href="./index.html">YEOSU STREAMING</a>
+			</h1>
+		</div>
+		<div class="search">
+			<div>
+				<input type="text" placeholder="검색">
+				<button><img src="./images/search.png" alt="icon"></button>
+			</div>
+		</div>
+		<div id="user">
+			<a href="./join.html" class="page">회원가입</a>
+			<a href="./login.html" class="page">로그인</a>
+			<span class='page logout'>로그아웃</span>
+			<a class='user' href='./user.html'>
+				<img src='./images/image.jpg' alt='profile' class='profile'>
+			</a>
+		</div>
+	</header>
+	<div class="user_wrap">
+		<div class="user_image">
+			<img src="./images/image.jpg" alt="user_image">
+			<p class="name"></p>
+			<span>팔로워 명</span>
+			<button class="follow">팔로우</button>
+			<button class="unfollow">팔로우 해제</button>
+			<button class="upload" onclick="location.href = './upload.html'">업로드</button>
+		</div>
+		<div class="video_list">
+		</div>
+	</div>
+</body>
+</html>
