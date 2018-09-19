@@ -60,7 +60,6 @@ class Path {
 		const pathString = (function(){
 			let str = Path.lbl[Path.arr[Path.pathList[0]]]
 			for (let i = 1; i < len; i++) {
-				console.log(i)
 				str += `
 					<i class="fas fa-long-arrow-alt-right"></i>
 					<span class="cost">${Path.normal[Path.arr[Path.pathList[i - 1]]][Path.arr[Path.pathList[i]]]} 분</span>
